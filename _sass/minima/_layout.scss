@@ -1,22 +1,63 @@
+#home-banner {
+  height: 420px;
+  text-align: center;
+  background-color: $github-blue;
+}
+
+#home-banner-text-high {
+  @include relative-font-size(10);
+  height: 300px;
+  //background-color: #f00;
+  color: #fff;
+  font-weight: 400;
+  padding-top: 50px;
+}
+
+#home-banner-text-low {
+  @include relative-font-size(2);
+  height: 120px;
+  //background-color: #0f0;
+  font-weight: 300;
+  color: #fff;
+  margin-top: -40px;
+}
+
+#home-text-1 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#home-text-2 {
+  font-size: 28px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+
 /**
  * Site header
  */
 .site-header {
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
-  min-height: $spacing-unit * 1.865;
+  //min-height: $spacing-unit * 2;
+  //min-height: 60px;
+  height: $header-height;
 
   // Positioning context for the mobile navigation icon
   position: relative;
+  //background-color: $grey-color-light;
 }
 
 .site-title {
-  @include relative-font-size(1.625);
-  font-weight: 300;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  @include relative-font-size(2.5);
+  font-weight: bold;
+  //line-height: $base-line-height * $base-font-size * 2.25;
+  line-height: $header-height;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
+  color: $grey-color-dark;
 
   &,
   &:visited {
@@ -26,7 +67,9 @@
 
 .site-nav {
   float: right;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  vertical-align: bottom;
+  //line-height: $base-line-height * $base-font-size * 2.25;
+  line-height: $header-height;
 
   .nav-trigger {
       display: none;
@@ -38,7 +81,10 @@
 
   .page-link {
     color: $text-color;
-    line-height: $base-line-height;
+    //line-height: $base-line-height;
+    line-height: $header-height;
+    font-weight: bold;
+    font-size: 18px;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -108,6 +154,7 @@
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
+  background-color: $grey-color-light;
 }
 
 .footer-heading {
@@ -215,6 +262,7 @@
   @include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1;
+  font-weight: bold;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);

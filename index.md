@@ -4,3 +4,9 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 ---
+
+Hello world.
+
+Here we write text for the home site.
+
+`<meta charset="UTF-8">`
